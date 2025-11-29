@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Book Sandbox</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <web-book
+      theme="light"
+      font-size="18px"
+      save-position="true"
+      show-progress="true"
+    >
+      <book-metadata
+        title="The Web Book Guide"
+        author="Web Book Team"
+        description="A comprehensive guide to using the Web Book library components."
+        publisher="Open Source Press"
+        publication-date="2023-10-27"
+        cover="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      ></book-metadata>
+
+      <book-chapter title="Introduction" number="1">
+        <book-paragraph dropcap="true">
+          Welcome to the Web Book library sandbox. This page demonstrates all
+          the available components and how they render in the browser. The
+          library is designed to provide a semantic and responsive reading
+          experience.
+        </book-paragraph>
+
+        <book-paragraph>
+          You can scroll through this document to see various elements in
+          action. The reading position is automatically saved, so if you reload
+          the page, you'll return to where you left off.
+        </book-paragraph>
+
+        <book-aside type="tip" title="Did you know?" collapsible="true">
+          <book-paragraph>
+            You can switch themes using the API or attributes. Try changing the
+            theme attribute on the
+            <code>web-book</code> element to "dark" or "sepia".
+          </book-paragraph>
+        </book-aside>
+      </book-chapter>
+
+      <book-chapter title="Text & Typography" number="2">
+        <book-section title="Paragraphs and Quotes">
+          <book-paragraph>
+            Standard paragraphs are the building blocks of any book. They
+            support alignment and indentation attributes.
+          </book-paragraph>
+
+          <book-quote attribution="Albert Einstein" type="pullquote">
+            Imagination is more important than knowledge. For knowledge is
+            limited, whereas imagination embraces the entire world, stimulating
+            progress, giving birth to evolution.
+          </book-quote>
+
+          <book-paragraph>
+            We also support epigraphs for chapter openings:
+          </book-paragraph>
+
+          <book-quote attribution="Herman Melville, Moby Dick" type="epigraph">
+            Call me Ishmael.
+          </book-quote>
+        </book-section>
+
+        <book-section title="Lists">
+          <book-paragraph>Here is an unordered list:</book-paragraph>
+          <book-list type="unordered">
+            <book-list-item>First item</book-list-item>
+            <book-list-item
+              >Second item with more text to show wrapping
+              behavior</book-list-item
+            >
+            <book-list-item>Third item</book-list-item>
+          </book-list>
+
+          <book-paragraph
+            >And an ordered list with custom markers:</book-paragraph
+          >
+          <book-list type="ordered" marker=")">
+            <book-list-item>Step one</book-list-item>
+            <book-list-item>Step two</book-list-item>
+            <book-list-item>Step three</book-list-item>
+          </book-list>
+        </book-section>
+
+        <book-section title="Code">
+          <book-paragraph>
+            Technical books often require code blocks. Here is a JavaScript
+            example:
+          </book-paragraph>
+
+          <book-code language="javascript" caption="Example Function">
+            function greet(name) { console.log(`Hello, ${name}!`); return true;
+            }
+          </book-code>
+        </book-section>
+      </book-chapter>
+
+      <book-chapter title="Media & Interactivity" number="3">
+        <book-section title="Images">
+          <book-paragraph>
+            Images can be responsive and include captions.
+          </book-paragraph>
+
+          <book-image
+            src="https://images.unsplash.com/photo-1507842217121-9e9628376272?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="Library shelves"
+            caption="A beautiful library interior"
+            credit="Unsplash"
+            shadow="true"
+            border="true"
+          ></book-image>
+        </book-section>
+
+        <book-section title="Interactive Elements">
+          <book-paragraph>
+            Footnotes are essential for academic texts. Here is a sentence with
+            a footnote<book-footnote number="1"
+              >This is the content of the footnote. It appears when you click
+              the number.</book-footnote
+            >.
+          </book-paragraph>
+
+          <book-paragraph>
+            Tooltips can define terms like
+            <book-tooltip term="HTML" definition="HyperText Markup Language"
+              >HTML</book-tooltip
+            >
+            inline.
+          </book-paragraph>
+
+          <book-accordion title="Click to expand for more details" open="false">
+            <book-paragraph>
+              This content is hidden by default. Accordions are great for
+              optional details or spoilers.
+            </book-paragraph>
+            <book-image
+              src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              size="small"
+              caption="Hidden image"
+            ></book-image>
+          </book-accordion>
+        </book-section>
+      </book-chapter>
+    </web-book>
+    <script type="module" src="../src/index.js"></script>
+  </body>
+</html>

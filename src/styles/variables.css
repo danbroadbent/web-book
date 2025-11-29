@@ -1,0 +1,5 @@
+:root {
+  --book-font-serif: 'Georgia', serif;
+  --book-font-sans: 'Helvetica Neue', sans-serif;
+  --book-transition-easing: ease;
+}
